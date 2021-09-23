@@ -23,7 +23,7 @@
 
     <div class="nav">
       <div class="nav-left">
-        <div class="logo"><img src="./img/images.png" alt="ico"></div>
+        <div class="logo"><a href="/"><img src="./img/images.png" alt="ico"></a></div>
         <div class="menu-links">
           <ul>
             <li><a href="/">Home</a></li>
@@ -43,22 +43,24 @@
 
   <section class="first-section">
     <div class="text">
-            <p class="subtitle">The Authority In</p>
-            <h1 class="title">
-              <span>Fashion <br> Culture</span>
-            </h1>
-            <p class="desc">Amazon is the cultural phenomenon surrounding <br> Beauty and Fashion culture.</p>
-            <a href="/" class="readmore">Click For More</a>
+      <div>
+        <p class="subtitle">The Authority In</p>
+        <h1 class="title">
+          <span>Fashion <br> Culture</span>
+        </h1>
+        <p class="desc">Amazon is the cultural phenomenon surrounding <br> Beauty and Fashion culture.</p>
+        <a href="/" class="readmore">Click For More</a>
+      </div>
     </div>
 
+    <div class="image-flip">
+      <img src="./img/img-2.jpg" alt="box" class="flip">
+    </div>
     <div class="distortion">
       
     </div>
   </section>
 
-  <!-- <section class="second-section">
-
-  </section> -->
  
 
   <!-- three js -->
@@ -147,6 +149,12 @@
       delay: 2.2,
       opacity: 0,
       y: "30",
+      ease: Expo.easeInOut
+    });
+ 
+    TweenMax.to(".flip", 1.5, {
+      delay: 2.2,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%",
       ease: Expo.easeInOut
     });
 
